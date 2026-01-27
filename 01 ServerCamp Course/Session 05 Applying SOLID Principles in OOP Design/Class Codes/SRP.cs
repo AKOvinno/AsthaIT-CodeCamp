@@ -3,7 +3,7 @@ namespace SRPExample;
 // ===============================
 // ❌ WITHOUT SRP
 // ===============================
-public class OrderManager
+public class OrderManager 
 {
     public string CustomerEmail { get; set; }
 

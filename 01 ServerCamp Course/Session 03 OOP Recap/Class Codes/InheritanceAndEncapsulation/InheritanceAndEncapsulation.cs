@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace OOP.Session03
 {
     // Different Types of Inheritance
