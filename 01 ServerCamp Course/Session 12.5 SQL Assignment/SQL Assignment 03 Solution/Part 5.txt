@@ -1,0 +1,15 @@
+CREATE VIEW HighValueProducts AS
+SELECT ProductID, ProductName, Category, PRICE
+FROM Products
+WHERE PRICE > 1000;
+
+CREATE PROCEDURE RegisterCustomer	
+	@CustomerID INT,
+	@FirstName VARCHAR(250),
+	@LastName VARCHAR(250),
+	@Email VARCHAR(250)
+AS 
+BEGIN
+	INSERT INTO Customers (CustomerID, FirstName, LastName, Email, RegistrationDate) VALUES
+	(@CustomerID, @FirstName, @LastName, @Email, GETDATE())
+END;

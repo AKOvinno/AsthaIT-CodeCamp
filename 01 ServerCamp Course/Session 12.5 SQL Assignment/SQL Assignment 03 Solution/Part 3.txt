@@ -1,0 +1,12 @@
+UPDATE Products SET PRICE = (PRICE+50)
+WHERE ProductName = 'iPhone 17';
+
+UPDATE Products SET StockQuantity = (StockQuantity-5)
+WHERE ProductName = 'Sony Headphones';
+
+DELETE FROM Orders WHERE OrderID = (
+	SELECT O.OrderID 
+	FROM Orders O
+	JOIN Customers C ON O.CustomerID = C.CustomerID
+	WHERE C.FirstName = 'Alice' AND C.LastName = 'Brown'
+);

@@ -1,0 +1,27 @@
+CREATE DATABASE TechZoneDB;
+
+CREATE TABLE Products (
+	ProductID INT PRIMARY KEY,
+	ProductName VARCHAR(250) NOT NULL,
+	Category VARCHAR(100),
+	PRICE DECIMAL(10, 2) NOT NULL,
+	StockQuantity INT DEFAULT 0
+);
+
+CREATE TABLE Customers (
+	CustomerID INT PRIMARY KEY,
+	FirstName VARCHAR(250) NOT NULL,
+	LastName VARCHAR(250),
+	Email VARCHAR(250) NOT NULL,
+	RegistrationDate DATE NOT NULL
+);
+
+CREATE TABLE Orders (
+	OrderID INT PRIMARY KEY,
+	CustomerID INT NOT NULL,
+	ProductID INT NOT NULL,
+	OrderDate DATE NOT NULL,
+	Quantity INT,
+	FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+	FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);

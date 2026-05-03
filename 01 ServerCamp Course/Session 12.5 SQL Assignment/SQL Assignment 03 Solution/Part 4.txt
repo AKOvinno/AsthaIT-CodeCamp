@@ -1,0 +1,15 @@
+SELECT (C.FirstName + ' ' + C.LastName) AS FullName, P.ProductName, O.OrderDate
+FROM Orders O
+JOIN Products P ON O.ProductID = P.ProductID
+JOIN Customers C ON O.CustomerID = C.CustomerID;
+
+SELECT SUM(PRICE * O.Quantity) AS TotalRevenueFromLaptop
+FROM Orders O
+JOIN Products P ON O.ProductID = P.ProductID
+WHERE P.Category = 'Laptop';
+
+SELECT (C.FirstName + ' ' + C.LastName) AS FullName, SUM(O.Quantity) AS TotalQuantity
+FROM Orders O
+JOIN Customers C ON O.CustomerID = C.CustomerID
+GROUP BY C.FirstName, C.LastName
+ORDER BY TotalQuantity DESC;
