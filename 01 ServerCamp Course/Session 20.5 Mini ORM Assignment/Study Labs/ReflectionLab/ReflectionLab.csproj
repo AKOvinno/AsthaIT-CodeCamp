@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="**/*.cs" />
+
+    <Compile Include="Program.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Attributes.cs" />
+    <Compile Include="Concepts\01_TypeOf.cs" />
+    <Compile Include="Concepts\02_GetProperties.cs" />
+    <Compile Include="Concepts\03_GetSetValue.cs" />
+  </ItemGroup>
+</Project>
