@@ -14,30 +14,8 @@ app.MapPost("/user", async(AppDbContext context, UserRequest request) =>
         Name = request.Name,
         Email = request.Email
     };
-    var entriesBeforeAdd = context.ChangeTracker.Entries()
-        .Select(e => new
-        {
-            EntityName = e.Entity.GetType().Name,
-            State = e.State.ToString()
-        });
-
     await context.Users.AddAsync(user);
-
-    var entriesAfterAdd = context.ChangeTracker.Entries()
-        .Select(e => new
-        {
-            EntityName = e.Entity.GetType().Name,
-            State = e.State.ToString()
-        });
-
     await context.SaveChangesAsync();
-
-    var entriesAfterSaveChange = context.ChangeTracker.Entries()
-        .Select(e => new
-        {
-            EntityName = e.Entity.GetType().Name,
-            State = e.State.ToString()
-        });
 });
 app.Run();
 
