@@ -38,7 +38,7 @@ public static class Concept02_NullableValueTypes
         // Accessing .Value when HasValue is false → crash!
         try
         {
-            var crash = b.Value;
+            var crash = b!.Value;
         }
         catch (InvalidOperationException)
         {

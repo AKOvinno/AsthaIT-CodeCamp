@@ -18,7 +18,7 @@ public static class Concept03_NullableReferenceTypes
 
         // ── string vs string? ─────────────────────────────────────
         string  required = "Hello";   // compiler warns if you assign null
-        string? optional = null;      // explicitly allowed to be null
+        string? optional = "ovinno";      // explicitly allowed to be null
 
         Console.WriteLine($"required = {required}");
         Console.WriteLine($"optional = {optional ?? "null"}");

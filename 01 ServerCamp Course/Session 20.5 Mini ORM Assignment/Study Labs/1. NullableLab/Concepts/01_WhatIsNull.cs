@@ -17,14 +17,17 @@ public static class Concept01_WhatIsNull
 
         // ── Reference types can be null by default ────────────────
         // string is a reference type — it can hold null
-        string? name = null;
+        string? name = "ovinno";
         Console.WriteLine($"name is null: {name == null}");  // True
 
         // Accessing a property on null crashes with
         // NullReferenceException — the most common C# crash
         try
         {
+            // Here, ! operator is null-forgiving operator / dammit operator
             int length = name!.Length;  // CRASH
+            // When you have Nullable Reference Types enabled in your project, the compiler tracks whether a variable might be null. If the compiler thinks name could be null, it will show a warning when you try to access .Length. By adding the !, you are manually overriding that warning. Using ! we are telling compilar its not null.
+            Console.WriteLine($"name.Length = {length}");
         }
         catch (NullReferenceException)
         {

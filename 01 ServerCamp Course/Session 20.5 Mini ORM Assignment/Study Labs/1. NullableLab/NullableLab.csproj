@@ -5,4 +5,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="**/*.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Concepts\01_WhatIsNull.cs" />
+    <Compile Include="Concepts\02_NullableValueTypes.cs" />
+    <Compile Include="Concepts\03_NullableReferenceTypes.cs" />
+  </ItemGroup>
 </Project>

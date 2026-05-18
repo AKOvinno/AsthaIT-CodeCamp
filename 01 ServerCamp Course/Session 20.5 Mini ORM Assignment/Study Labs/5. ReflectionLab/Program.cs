@@ -13,8 +13,8 @@ Console.WriteLine("╚═══════════════════�
 Console.WriteLine();
 
 Concept01_TypeOf.Run();
-Concept02_GetProperties.Run();
-Concept03_GetSetValue.Run();
+//Concept02_GetProperties.Run();
+//Concept03_GetSetValue.Run();
 //Concept04_Attributes.Run();
 //Concept05_Generics.Run();
 //Concept06_Nullable.Run();

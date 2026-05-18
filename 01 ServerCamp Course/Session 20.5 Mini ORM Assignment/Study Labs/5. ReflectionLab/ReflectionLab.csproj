@@ -12,7 +12,5 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Attributes.cs" />
     <Compile Include="Concepts\01_TypeOf.cs" />
-    <Compile Include="Concepts\02_GetProperties.cs" />
-    <Compile Include="Concepts\03_GetSetValue.cs" />
   </ItemGroup>
 </Project>
