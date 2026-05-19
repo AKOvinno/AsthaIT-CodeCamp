@@ -73,7 +73,18 @@ app.MapPost("/many-to-many", async(AppDbContext context) =>
     await context.Enrollments.AddAsync(enrollment);
     await context.SaveChangesAsync();
 });
-app.MapGet("/students-courses", (AppDbContext context) =>{
-    
-})
+app.MapGet("/students-courses", async (AppDbContext context) =>
+{
+    // var students = context.Students
+    //     .Include(e => e.Enrollments!)
+    //     .ThenInclude(e => e.Course)
+    //     .Select(e => new
+    //     {
+    //         e.Name,
+    //         Course = e.Enrollments!.Select(c => c.Course!.Title).ToList()
+    //     });
+    //     return Results.Ok(students);
+    var student = await context.Students.FirstOrDefaultAsync(); // Here enrollments will be null
+    return Results.Ok(student);
+});
 app.Run();
