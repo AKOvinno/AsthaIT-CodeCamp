@@ -4,3 +4,4 @@ obj/
 *.exe
 *.o
 *.mp4
+.vs/
