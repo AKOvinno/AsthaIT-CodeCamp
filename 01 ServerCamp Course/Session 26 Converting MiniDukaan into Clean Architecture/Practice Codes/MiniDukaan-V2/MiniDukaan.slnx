@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MiniDukaan.Application/MiniDukaan.Application.csproj" />
+  <Project Path="MiniDukaan.Domain/MiniDukaan.Domain.csproj" />
+  <Project Path="MiniDukaan.Host/MiniDukaan.Host.csproj" />
+  <Project Path="MiniDukaan.Infrastructure/MiniDukaan.Infrastructure.csproj" />
+</Solution>
